@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="../IMAGENS/INDEX/4.png">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+<link rel="stylesheet" href="../CSS/caes.css">
+<link rel="stylesheet" href="../CSS/swiper-bundle.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>San Charles Pet - Cães</title>
+  </head>
+  <body>
+    <div class="topbar">
+      <section class="container">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a href="index.html"
+              ><img
+                src="../IMAGENS/CÃES/logo1.png"
+                class="img-menu"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarScroll"
+              aria-controls="navbarScroll"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+              <ul class="navbar-nav navbar-center">
+                <li class="nav-item">
+                  <a
+                    class="nav-link "
+                    aria-current="page"
+                    href="../index.html"
+                    >INÍCIO</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./sobre.html">
+                    SOBRE</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contato.html">
+                    CONTATO</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    PRODUTOS
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="./caes.html"
+                        >Cães</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="./gatos.html"
+                        >Gatos</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="./passaros.html"
+                        >Passáros</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="./roedores.html"
+                        >Roedores</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <input
+              type="text"
+              class="barra-pesquisa"
+              placeholder="Qual produto você deseja?"
+            />
+                <a href="">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACsElEQVR4nO2ZzUuUURSHXzdlNAURoW41ym2boIVfiX9BSy2iQAz8H5JaqO3dZxBESx382NaiD21Z1qZNu8yVUc0YPXHxQLfT9TYznjvzTr0PDAwD7/mdw33PPR+TZQUF+QPoAW4CD4BXwCegKp9tYBNYBG4A3VneAIaBMvCd2tkDloHBPARwFljj8KwAfa0K4hrwGTt2gYlmB3En4tAbYBYYBc4Dx+XTL7/NAVuR52eaFcTdAxx4AYzUYecS8LQlwbD/OmkqwCTQ0YC9DmBKbGjGUya2zgl3vQ4Y2B4EdgI502vj/e9i+naqWATh2R+SeuNTtrLv1wnNpKnIvs6tgM6ApYArdj7PG8mJGnPmpdJasmw7XBX2GTIxHtYbUVp7QJeFYdc7+bw28Tiu+VZpXrcw6hpAn1kTb+Oa80rzvoVR18X6jJp4G9ccU5obFkZdrfA5Z+JtXNO1Nj4fLYzqqlsy8TauWVKa31IEcsLE27jmSaW5+6+8Wu8tjG7mINmfWRh1M7bPnIm3cc17SnMhRUHcMvE2rvlOaV6xMNodaFGGTTwO67kp0qcCnLYy7rYdehpM1TTqnFy0FHCDj2bKTOCXznRA54K1iFvZ+FQtd1LS9erB6qGVfV+oT8ZPnx2Lll4GNz3qus3kGRvv/xScCBx9VSa7RpcP04GTcDwBjiQJRMRnCLMBXK7zdtKJrVkBOlsRDDIUzUt17pcGsCTfx6TY6ToRYyn1yYwHciYVy8DRlMH0BhYT9fIDeAystzQYh1vZyCugO4AYX4FHwEWx0Qms/uWZcvJgxJkutyhwM7Yk/7a0GF+AD7LqWQCuAqcCz+cnmMPiEjvQEmlWk95mTQ5mrQim2fAfnsw6cCzLO9R2mzX3/8dEJ3M7aycIB9NeQRwQTHsGoXImzZ+lBQVZlJ/po/gO7uhxQgAAAABJRU5ErkJggg==" height="30px" width="30px">
+               </a>
+              </form>
+              <div class="icones-nav">
+            <a href="index.html"><img src="../IMAGENS/CÃES/icones/carrinho.png" /></a>
+    
+            <a href="../HTML/login.html"><img src="../IMAGENS/CÃES/icones/user.png" /></a>
+          </div>
+          <section class="contato">
+            <div class="info">
+              <div class="first-section">
+              <a href="index.html"><img src="./imagens/logorodape.png" alt="" class="logo-footer"></a>
+              <div class="icones-footer">
+                <a href="index.html"><img src="../IMAGENS/CÃES/icones/insta.png" class="icone" /></a>
+                <a href="index.html"><img src="../IMAGENS/CÃES/icones/face.png" class="icone" /></a>
+                <a href="index.html"><img src="../IMAGENS/CÃES/icones/whats.png" class="icone"/></a>
+                <a href="index.html"><img src="../IMAGENS/CÃES/icones/linkedin.png"class="icone" /></a>
+              </div>
+            
+            </div>
+              </div>
+            </div>
+          </div>
+      
+        </nav>
+      </section>
+    </div>
+<!-- banner -->
+  
+<div class="banner">
+  <img src="../IMAGENS/ROEDORES/banner-roedores.png" style="width: 100%" />
+</div>
+
+<section id="caixas">
+  <div class="caixa-content">
+  <div class="birds">
+    <a href="./passaros.html"><img src="../IMAGENS/CÃES/passaros.png" 
+    width="200px" height="200px"/></a>
+    <h3>Pássaros</h3>
+  </div></div>
+
+  <div class="caixa-content">
+  <div class="dogs">
+    <a href="../HTML/caes.html"><img src="../IMAGENS/CÃES/cachorro.png" 
+    width="200px" height="200px"/></a>
+    <h3>Cachorros</h3>
+  </div></div>
+
+  <div class="caixa-content">
+  <div class="cats">
+   <a href="./gatos.html"> <img src="../IMAGENS/CÃES/gatos.png" 
+    width="200px" height="200px"/></a>
+    <h3>Gatos</h3>
+  </div></div>
+
+<div class="caixa-content">
+  <div class="roedores">
+   <a href="./roedores.html"> <img src="../IMAGENS/CÃES/roedores.png" 
+    width="200px" height="200px"/></a>
+    <h3>Roedores</h3>
+  </div></div>
+</section>
+
+<!-- container produtos-->
+
+<h1>PRODUTOS MAIS VENDIDOS</h1>
+<div id="container">
+  <div class="card">
+      <img class="album" src="../IMAGENS/ROEDORES/produtos/1.png"/>
+
+      <div class="card-content">
+        <h5>PÁ HIGIÊNICA</h5>
+  <p>
+    – Conserva as propriedades dos alimentos<br />
+    – Pote sem emendas<br />
+    – Mais sustentável para o meio ambiente<br />
+
+    </p>
+    <div class="rating">
+      <span class="star" data-rating="1"></span>
+      <span class="star" data-rating="2"></span>
+      <span class="star" data-rating="3"></span>
+      <span class="star" data-rating="4"></span>
+      <span class="star" data-rating="5"></span>
+    </div>
+        <button class="btn-produto">
+          Faça login ou cadastre-se para visualizar o preço.
+        </button>
+      </div>
+      </div>
+
+
+      <div class="card">
+          <img class="album" src="../IMAGENS/ROEDORES/produtos/2.png"/>
+          <div class="card-content">
+            <h5>Casa Para Hamster Pet Injet</h5>
+      <p>
+        – Pote sem emendas<br />
+        – Mais sustentável para o meio ambiente<br />
+        – Extrema resistência
+        </p>
+        <div class="rating">
+          <span class="star" data-rating="1"></span>
+          <span class="star" data-rating="2"></span>
+          <span class="star" data-rating="3"></span>
+          <span class="star" data-rating="4"></span>
+          <span class="star" data-rating="5"></span>
+        </div>
+            <button class="btn-produto">
+              Faça login ou cadastre-se para visualizar o preço.
+            </button>
+          </div>
+          </div>
+
+  <div class="card">
+      <img class="album" src="../IMAGENS/ROEDORES/produtos/3.png"/>
+      <div class="card-content">
+        <h5>Comedouro para Hamster </h5>
+  <p>
+    – Design exclusivo<br />
+    – Super-resistente<br />
+    – Alta capacidade
+
+    </p>
+    <div class="rating">
+      <span class="star" data-rating="1"></span>
+      <span class="star" data-rating="2"></span>
+      <span class="star" data-rating="3"></span>
+      <span class="star" data-rating="4"></span>
+      <span class="star" data-rating="5"></span>
+    </div>
+        <button class="btn-produto">
+          Faça login ou cadastre-se para visualizar o preço.
+        </button>
+      </div>
+      </div>
+
+
+  <div class="card">
+      <img class="album" src="../IMAGENS/ROEDORES/produtos/4.png"/>
+      <div class="card-content">
+        <h5>ALIMENTADOR CONTÍNUO TECO</h5>
+  <p>
+    – Fácil higienização<br />
+    – Alimentador contínuo<br />
+    – Menos abastecimentos
+    </p>
+    <div class="rating">
+      <span class="star" data-rating="1"></span>
+      <span class="star" data-rating="2"></span>
+      <span class="star" data-rating="3"></span>
+      <span class="star" data-rating="4"></span>
+      <span class="star" data-rating="5"></span>
+    </div>
+        <button class="btn-produto">
+          Faça login ou cadastre-se para visualizar o preço.
+        </button>
+      </div>
+      </div>
+
+  </div>
+  <div id="container">
+  <div class="card">
+      <img class="album" src="../IMAGENS/ROEDORES/produtos/5.png"/>
+
+      <div class="card-content">
+        <h5>BEBEDOURO PARA HAMSTER TECO </h5>
+  <p>
+    – Bico de alumínio<br />
+    – Suporte para gaiolas
+    </p>
+    <div class="rating">
+      <span class="star" data-rating="1"></span>
+      <span class="star" data-rating="2"></span>
+      <span class="star" data-rating="3"></span>
+      <span class="star" data-rating="4"></span>
+      <span class="star" data-rating="5"></span>
+    </div>
+        <button class="btn-produto">
+          Faça login ou cadastre-se para visualizar o preço.
+        </button>
+      </div>
+      </div>
+
+
+      <div class="card">
+          <img class="album" src="../IMAGENS/ROEDORES/produtos/6.png"/>
+          <div class="card-content">
+            <h5>HAMSTER BALL <br>PLAST PET</h5>
+      <p>
+        – Globo transparente<br />
+        – Ventilação interna<br />
+        – Acompanha suporte<br />
+  
+        </p>
+        <div class="rating">
+          <span class="star" data-rating="1"></span>
+          <span class="star" data-rating="2"></span>
+          <span class="star" data-rating="3"></span>
+          <span class="star" data-rating="4"></span>
+          <span class="star" data-rating="5"></span>
+        </div>
+            <button class="btn-produto">
+              Faça login ou cadastre-se para visualizar o preço.
+            </button>
+          </div>
+          </div>
+
+  <div class="card">
+      <img class="album" src="../IMAGENS/ROEDORES/produtos/7.webp"/>
+      <div class="card-content">
+        <h5>Bebedouro Hamster Pingoo 60ml Vidro Mini</h5>
+        <p>Fácil higienização
+          <br>Abertura para aumento da capacidade de água
+          </p>
+    <div class="rating">
+      <span class="star" data-rating="1"></span>
+      <span class="star" data-rating="2"></span>
+      <span class="star" data-rating="3"></span>
+      <span class="star" data-rating="4"></span>
+      <span class="star" data-rating="5"></span>
+    </div>
+        <button class="btn-produto">
+          Faça login ou cadastre-se para visualizar o preço.
+        </button>
+      </div>
+      </div>
+
+
+  <div class="card">
+      <img class="album" src="../IMAGENS/ROEDORES/produtos/8.webp"/>
+      <div class="card-content">
+        <h5>Gaiola Hamster Labirinto 2 Andares
+      
+          </h5>
+  <p>Fácil higienização
+    Maior espaçamento entre a base e a grade
+     Permite adição de jornais
+    </p>
+    <div class="rating">
+      <span class="star" data-rating="1"></span>
+      <span class="star" data-rating="2"></span>
+      <span class="star" data-rating="3"></span>
+      <span class="star" data-rating="4"></span>
+      <span class="star" data-rating="5"></span>
+    </div>
+        <button class="btn-produto">
+          Faça login ou cadastre-se para visualizar o preço.
+        </button>
+      </div>
+      </div>
+
+  </div>
+
+<section class="banner-avaliacao">
+  <img src="../IMAGENS/ROEDORES/cards/banner-avaliacao.png" alt="" class="banner-avaliacao">
+</section>
+
+  <!-- cards -->
+<section class="container">
+  <div class="card-container swiper">
+    <div class="card-content2">
+      <div class="swiper-wrapper">
+        <article class="card-article swiper-slide">
+          <div class="card-image">
+            <img src="../IMAGENS/ROEDORES/cards/1.png" alt="" class="card-image">
+          
+ </div>
+ <div class="card-data">
+  <h3 class="card-name">Kawli Lost</h3>
+    <p class="card-descricao">
+Podem confiar de olhos fechados, a San Charles é a melhor opção.
+    </p>
+  <a href="" class="card-button">Saber mais</a>
+ </div>
+
+        </article>
+
+
+        <article class="card-article swiper-slide">
+          <div class="card-image">
+            <img src="../IMAGENS/ROEDORES/cards/2.png" alt="" class="card-image">
+            <div class="card-shadow"></div>
+ </div>
+ <div class="card-data">
+  <h3 class="card-name">Dora Marquez</h3>
+    <p class="card-descricao">
+Uma das minhas empresas favoritas. 
+Sempre muito atenciosos.
+    </p>
+  <a href="" class="card-button">Saber mais</a>
+ </div>
+
+        </article>
+
+
+        <article class="card-article swiper-slide">
+          <div class="card-image">
+            <img src="../IMAGENS/ROEDORES/cards/3.png" alt="" class="card-image">
+            <div class="card-shadow"></div>
+ </div>
+ <div class="card-data">
+  <h3 class="card-name">Leticia Nunes</h3>
+    <p class="card-descricao">
+Já faz tempo que adquiro produtos aqui. Além da qualidade, o preço é acessível.
+    </p>
+  <a href="" class="card-button">Saber mais</a>
+ </div>
+
+        </article>
+
+
+        <article class="card-article swiper-slide">
+          <div class="card-image">
+            <img src="../IMAGENS/ROEDORES/cards/4.png" alt="" class="card-image">
+            <div class="card-shadow"></div>
+ </div>
+ <div class="card-data">
+  <h3 class="card-name">John Pierce</h3>
+    <p class="card-descricao">
+A San Charles Pet é realmente uma boa opção para seu Pet. 
+    </p>
+  <a href="" class="card-button">Saber mais</a>
+ </div>
+
+        </article>
+
+        <article class="card-article swiper-slide">
+          <div class="card-image">
+            <img src="../IMAGENS/ROEDORES/cards/5.png" alt="" class="card-image">
+            <div class="card-shadow"></div>
+ </div>
+ <div class="card-data">
+  <h3 class="card-name">Théo Jones</h3>
+    <p class="card-descricao">
+Os produtos são de ótima qualidade. Além do ótimo atendimento.
+    </p>
+  <a href="" class="card-button">Saber mais</a>
+ </div>
+
+        </article>
+      </div>
+    </div>
+    <div class="swiper-button-prev">
+      <i class="ri-arrow-right-s-line"></i>
+    </div>
+  <div class="swiper-button-next">
+    <i class="ri-arrow-left-s-line"></i>
+  </div>
+  <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+   
+
+<a id="link-topo" href="">&#9650;</a>
+<!-- footer -->
+
+
+    <footer>
+      <div class="container-footer">
+        <div class="row-footer">
+       
+
+          <div class="footer-col">
+            <h6>Categorias</h6>
+            <ul>
+              <li><a href="#"> Cães </a></li>
+              <li><a href=""> Gatos </a></li>
+              <li><a href=""> Passáros </a></li>
+              <li><a href=""> Roedores</a></li>
+            </ul>
+          </div>
+        
+          <div class="footer-col">
+            <h6>Obter ajuda</h6>
+            <ul>
+              <li><a href="#">Atendimento</a></li>
+              <li><a href="#">Regulamentos</a></li>
+              <li><a href="#">devoluções</a></li>
+              <li><a href="#">Ouvidoria</a></li>
+            </ul>
+          </div>
+         
+          <div class="footer-col">
+            <h6>Downloads</h6>
+            <ul>
+              <li><a href="#">Catálogo</a></li>
+              <li><a href="#">Foto dos produtos</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-col">
+            <h6>Inscreva-se</h6>
+            <div class="form-sub">
+              <form>
+                <input
+                  type="email"
+                  placeholder="Digite o seu e-mail"
+                  required
+                />
+                <button>Envie</button>
+              </form>
+            </div>
+
+            <div class="medias-socias">
+              <a href="#"
+                ><img src="../IMAGENS/ROEDORES/icones/face.png" alt="" />
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a href="#">
+                <img src="../IMAGENS/ROEDORES/icones/insta.png" alt="" />
+                <i class="fa fa-instagram"></i>
+              </a>
+              <a href="#">
+                <img src="../IMAGENS/ROEDORES/icones/whats.png" alt="" />
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a href="#">
+                <img src="../IMAGENS/ROEDORES/icones/linkedin.png" alt="" />
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+    
+<script src="../JS/stars.js"></script>
+<script src="../JS/swiper-bundle.min.js"></script>
+  </body>
+</html>

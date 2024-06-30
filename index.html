@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./IMAGENS/INDEX/4.png">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+<link rel="stylesheet" href="./CSS/index.css">
+<link rel="stylesheet" href="../CSS/swiper-bundle.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>San Charles Pet </title>
+  </head>
+  <body>
+    <div class="topbar">
+      <section class="container">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a href="index.html"
+              ><img
+                src="./IMAGENS/INDEX/logo1.png"
+                class="img-menu"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarScroll"
+              aria-controls="navbarScroll"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+              <ul class="navbar-nav navbar-center">
+                <li class="nav-item">
+                  <a
+                    class="nav-link "
+                    aria-current="page"
+                    href="./index.html"
+                    >INÍCIO</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./HTML/sobre.html">
+                    SOBRE</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./HTML/contato.html">
+                    CONTATO</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    PRODUTOS
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="./HTML/caes.html"
+                        >Cães</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="./gatos.html"
+                        >Gatos</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="./HTML/passaros.html"
+                        >Passáros</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="./HTML/roedores.html"
+                        >Roedores</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <input
+              type="text"
+              class="barra-pesquisa"
+              placeholder="Qual produto você deseja?"
+            />
+                <a href="">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACsElEQVR4nO2ZzUuUURSHXzdlNAURoW41ym2boIVfiX9BSy2iQAz8H5JaqO3dZxBESx382NaiD21Z1qZNu8yVUc0YPXHxQLfT9TYznjvzTr0PDAwD7/mdw33PPR+TZQUF+QPoAW4CD4BXwCegKp9tYBNYBG4A3VneAIaBMvCd2tkDloHBPARwFljj8KwAfa0K4hrwGTt2gYlmB3En4tAbYBYYBc4Dx+XTL7/NAVuR52eaFcTdAxx4AYzUYecS8LQlwbD/OmkqwCTQ0YC9DmBKbGjGUya2zgl3vQ4Y2B4EdgI502vj/e9i+naqWATh2R+SeuNTtrLv1wnNpKnIvs6tgM6ApYArdj7PG8mJGnPmpdJasmw7XBX2GTIxHtYbUVp7QJeFYdc7+bw28Tiu+VZpXrcw6hpAn1kTb+Oa80rzvoVR18X6jJp4G9ccU5obFkZdrfA5Z+JtXNO1Nj4fLYzqqlsy8TauWVKa31IEcsLE27jmSaW5+6+8Wu8tjG7mINmfWRh1M7bPnIm3cc17SnMhRUHcMvE2rvlOaV6xMNodaFGGTTwO67kp0qcCnLYy7rYdehpM1TTqnFy0FHCDj2bKTOCXznRA54K1iFvZ+FQtd1LS9erB6qGVfV+oT8ZPnx2Lll4GNz3qus3kGRvv/xScCBx9VSa7RpcP04GTcDwBjiQJRMRnCLMBXK7zdtKJrVkBOlsRDDIUzUt17pcGsCTfx6TY6ToRYyn1yYwHciYVy8DRlMH0BhYT9fIDeAystzQYh1vZyCugO4AYX4FHwEWx0Qms/uWZcvJgxJkutyhwM7Yk/7a0GF+AD7LqWQCuAqcCz+cnmMPiEjvQEmlWk95mTQ5mrQim2fAfnsw6cCzLO9R2mzX3/8dEJ3M7aycIB9NeQRwQTHsGoXImzZ+lBQVZlJ/po/gO7uhxQgAAAABJRU5ErkJggg==" height="30px" width="30px">
+               </a>
+              </form>
+              <div class="icones-nav">
+            <a href="index.html"><img src="./IMAGENS/INDEX/icones/carrinho.png" /></a>
+    
+            <a href="LOGIN/HTML/login.html"><img src="./IMAGENS/INDEX/icones/user.png" /></a>
+          </div>
+          <section class="contato">
+            <div class="info">
+              <div class="first-section">
+              <a href="index.html"><img src="./imagens/logorodape.png" alt="" class="logo-footer"></a>
+              <div class="icones-footer">
+                <a href="index.html"><img src="./IMAGENS/INDEX/icones/insta.png" class="icone" /></a>
+                <a href="index.html"><img src="./IMAGENS/INDEX/icones/face.png" class="icone" /></a>
+                <a href="index.html"><img src="./IMAGENS/INDEX/icones/whats.png" class="icone"/></a>
+                <a href="index.html"><img src="./IMAGENS/INDEX/icones/linkedin.png"class="icone" /></a>
+              </div>
+            
+            </div>
+              </div>
+            </div>
+          </div>
+      
+        </nav>
+      </section>
+    </div>
+<!-- carrossel -->
+<div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./IMAGENS/INDEX/banner-home.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./IMAGENS/INDEX/banner2.png" class="d-block w-100" alt="...">
+    </div>
+  
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- caixas -->
+    
+    <section id="caixas">
+      <div class="caixa-content">
+      <div class="birds">
+       <a href="./HTML/passaros.html"> <img src="./IMAGENS/INDEX/passaros.png" 
+        width="200px" height="200px"/></a>
+        <h3>Pássaros</h3>
+      </div></div>
+    
+      <div class="caixa-content">
+      <div class="dogs">
+        <a href="./HTML/caes.html"><img src="./IMAGENS/INDEX/cachorro.png" 
+        width="200px" height="200px"/></a>
+        <h3>Cachorros</h3>
+      </div></div>
+    
+      <div class="caixa-content">
+      <div class="cats">
+       <a href="./HTML/gatos.html"> <img src="./IMAGENS/INDEX/gatos.png" 
+        width="200px" height="200px"/></a>
+        <h3>Gatos</h3>
+      </div></div>
+    
+    <div class="caixa-content">
+      <div class="roedores">
+       <a href="./HTML/roedores.html"> <img src="./IMAGENS/INDEX/roedores.png" 
+        width="200px" height="200px"/></a>
+        <h3>Roedores</h3>
+      </div></div>
+    </section>
+<!-- container produtos-->
+
+<h6>Mais Vendidos</h6>
+<div id="container">
+  <div class="card">
+      <img class="album" src="./IMAGENS/INDEX/produto1.png"/>
+
+      <div class="card-content">
+        <h5>Bebedouro e Purificador </h5>
+  <p>Pote sem emendas
+     <br>Mais sustentável para o meio ambiente
+     
+    </p>
+    <div class="rating">
+      <span class="star" data-rating="1"></span>
+      <span class="star" data-rating="2"></span>
+      <span class="star" data-rating="3"></span>
+      <span class="star" data-rating="4"></span>
+      <span class="star" data-rating="5"></span>
+    </div>
+        <button class="btn-produto">
+          Faça login ou cadastre-se para visualizar o preço.
+        </button>
+      </div>
+      </div>
+
+
+      <div class="card">
+          <img class="album" src="./IMAGENS/INDEX/produto2.png"/>
+          <div class="card-content">
+            <h5>Dispenser Pro Unitário </h5>
+      <p> Fácil higienização
+        <br>Compartimento com tampa para adicionar peso
+     
+        </p>
+        <div class="rating">
+          <span class="star" data-rating="1"></span>
+          <span class="star" data-rating="2"></span>
+          <span class="star" data-rating="3"></span>
+          <span class="star" data-rating="4"></span>
+          <span class="star" data-rating="5"></span>
+        </div>
+            <button class="btn-produto">
+              Faça login ou cadastre-se para visualizar o preço.
+            </button>
+          </div>
+          </div>
+
+  <div class="card">
+      <img class="album" src="./IMAGENS/INDEX/produto3.png"/>
+      <div class="card-content">
+        <h5>Bico do Dispenser Flex</h5>
+  <p> Design exclusivo
+    <br>Super-resistente
+    <br>Alta capacidade
+    </p>
+    <div class="rating">
+      <span class="star" data-rating="1"></span>
+      <span class="star" data-rating="2"></span>
+      <span class="star" data-rating="3"></span>
+      <span class="star" data-rating="4"></span>
+      <span class="star" data-rating="5"></span>
+    </div>
+        <button class="btn-produto">
+          Faça login ou cadastre-se para visualizar o preço.
+        </button>
+      </div>
+      </div>
+
+
+  <div class="card">
+      <img class="album" src="./IMAGENS/INDEX/produto4.png"/>
+      <div class="card-content">
+        <h5>Comedouro 1 furo</h5>
+  <p> Acolhe portes variados de cães
+     <br>Fácil higienização
+     <br>Ótima circulação de ar
+    </p>
+    <div class="rating">
+      <span class="star" data-rating="1"></span>
+      <span class="star" data-rating="2"></span>
+      <span class="star" data-rating="3"></span>
+      <span class="star" data-rating="4"></span>
+      <span class="star" data-rating="5"></span>
+    </div>
+        <button class="btn-produto">
+          Faça login ou cadastre-se para visualizar o preço.
+        </button>
+      </div>
+      </div>
+
+  </div>
+  <div id="container">
+  <div class="card">
+      <img class="album" src="./IMAGENS/INDEX/produto5.png"/>
+
+      <div class="card-content">
+        <h5>Brinquedo Bola Cravo Maciça</h5>
+  <p>Sistema quádruplo de travas
+     <br>Porta 100% removível
+     <br> Bebedouro interno
+    </p>
+    <div class="rating">
+      <span class="star" data-rating="1"></span>
+      <span class="star" data-rating="2"></span>
+      <span class="star" data-rating="3"></span>
+      <span class="star" data-rating="4"></span>
+      <span class="star" data-rating="5"></span>
+    </div>
+        <button class="btn-produto">
+          Faça login ou cadastre-se para visualizar o preço.
+        </button>
+      </div>
+      </div>
+
+
+      <div class="card">
+          <img class="album" src="./IMAGENS/INDEX/produto6.png"/>
+          <div class="card-content">
+            <h5>HAMSTER BALL <BR>PLAST PET</h5>
+      <p>Fácil higienização
+        <br>Abertura para aumento da capacidade de água
+        </p>
+        <div class="rating">
+          <span class="star" data-rating="1"></span>
+          <span class="star" data-rating="2"></span>
+          <span class="star" data-rating="3"></span>
+          <span class="star" data-rating="4"></span>
+          <span class="star" data-rating="5"></span>
+        </div>
+            <button class="btn-produto">
+              Faça login ou cadastre-se para visualizar o preço.
+            </button>
+          </div>
+          </div>
+
+  <div class="card">
+      <img class="album" src="./IMAGENS/INDEX/produto7.png"/>
+      <div class="card-content">
+        <h5>CASA PARA CÃO OU GATO PLAST PET</h5>
+  <p>Fácil higienização
+    <br>Formato anatômico
+    <br>Entrada abaulada
+    </p>
+    <div class="rating">
+      <span class="star" data-rating="1"></span>
+      <span class="star" data-rating="2"></span>
+      <span class="star" data-rating="3"></span>
+      <span class="star" data-rating="4"></span>
+      <span class="star" data-rating="5"></span>
+    </div>
+        <button class="btn-produto">
+          Faça login ou cadastre-se para visualizar o preço.
+        </button>
+      </div>
+      </div>
+
+
+  <div class="card">
+      <img class="album" src="./IMAGENS/INDEX/produto8.png"/>
+      <div class="card-content">
+        <h5>SANITÁRIO PRATIC 
+          <BR>PIPI POP
+          </h5>
+  <p>Fácil higienização
+    Maior espaçamento entre a base e a grade
+     Permite adição de jornais
+    </p>
+    <div class="rating">
+      <span class="star" data-rating="1"></span>
+      <span class="star" data-rating="2"></span>
+      <span class="star" data-rating="3"></span>
+      <span class="star" data-rating="4"></span>
+      <span class="star" data-rating="5"></span>
+    </div>
+        <button class="btn-produto">
+          Faça login ou cadastre-se para visualizar o preço.
+        </button>
+      </div>
+      </div>
+
+  </div>
+
+    <section id="novidades-box">
+    <center><img src="./IMAGENS/INDEX/box.png" alt="" class="banner-novidades"></center>
+    <div class="input-news">
+      <input
+      type="text"
+      class="input-box"
+      placeholder="E-mail"
+    />
+    <button class="email-entrar">
+      ENVIAR
+    </button>
+    </div>
+    </section>
+<!-- footer -->
+
+
+<footer>
+  <div class="container-footer">
+    <div class="row-footer">
+   
+
+      <div class="footer-col">
+        <h7>Categorias</h7>
+        <ul>
+          <li><a href="./INDEX/CÃES/HTML e CSS/caes.html"> Cães </a></li>
+          <li><a href=""> Gatos </a></li>
+          <li><a href=""> Passáros </a></li>
+          <li><a href=""> Roedores</a></li>
+        </ul>
+      </div>
+    
+      <div class="footer-col">
+        <h7>Obter ajuda</h7>
+        <ul>
+          <li><a href="#">Atendimento</a></li>
+          <li><a href="#">Regulamentos</a></li>
+          <li><a href="#">devoluções</a></li>
+          <li><a href="#">Ouvidoria</a></li>
+        </ul>
+      </div>
+     
+      <div class="footer-col">
+        <h7 >Downloads</h7>
+        <ul>
+          <li><a href="#">Catálogo</a></li>
+          <li><a href="#">Foto dos produtos</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-col">
+        <h7>Inscreva-se</h7>
+        <div class="form-sub">
+          <form>
+            <input
+              type="email"
+              placeholder="Digite o seu e-mail"
+              required
+            />
+            <button>Envie</button>
+          </form>
+        </div>
+
+        <div class="medias-socias">
+          <a href="#"
+            ><img src="./IMAGENS/INDEX/icones/face.png" alt="" />
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="#">
+            <img src="./IMAGENS/INDEX/icones/linkedin.png" alt="" />
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a href="#">
+            <img src="./IMAGENS/INDEX/icones/whats.png" alt="" />
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="#">
+            <img src="./IMAGENS/INDEX/icones/insta.png" alt="" />
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+<script src="./JS/stars.js"></script>
+    <script src="./JS/index.js"></script>
+
+  </body>
+</html>
